@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>ButtonCat</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Estilos Globales-->
+    <style>
+        h1, h2, h3, h4, h5, h6 { font-family: 'Fredoka', sans-serif !important; }
+    </style>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-purple-50 text-gray-800 bg-[url('img/textura8.jpg')] bg-cover">
+    <!-- NAVBAR -->
+    <nav class="sticky top-0 z-50 bg-purple-600 text-white p-4 flex flex-col md:flex-row justify-between items-center gap-4 text-center shadow-md">
+        <h1 class="text-xl md:text-2xl font-bold text-orange-300 tracking-wide">
+            ButtonCat | Accesorios y Peluches</h1>
+        <ul class="flex flex-wrap justify-center gap-4">
+            <li><a href="#" class="hover:text-orange-200">Inicio</a></li>
+            <li><a href="#productos" class="hover:text-orange-200 transition-colors">Productos</a></li>
+            <li><a href="#contacto" class="hover:text-orange-200 transition-colors">Contacto</a></li>
+        </ul>
+    </nav>
+    <main class="max-w-5xl mx-auto p-6 flex flex-col gap-10">
+        <!-- HERO -->
+        <section class="text-center mt-6">
+            <div class="bg-purple-100 p-6 rounded shadow-[6px_6px_0_#000] border-2 border-black hover:-translate-y-1 hover:shadow-[12px_12px_0_#000] transition-all max-w-3xl mx-auto">
+                <!-- Contenedor para la hitbox -->
+                <div class="relative w-full mb-6 border-2 border-black rounded overflow-hidden">
+                    <img src="https://buttoncat.carrd.co/assets/images/image01.jpg?v=74d1d79f"
+                        class="w-full h-auto md:h-64 object-cover md:object-cover">
+                        
+                    <!-- Hitbox para la nariz -->
+                    <button onclick="let a = document.getElementById('sonido-boop'); a.currentTime = 0; a.play();" 
+                            class="absolute top-[47%] left-[74.5%] -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full cursor-pointer focus:outline-none"></button>
+                            
+                    <!-- Sonido -->
+                    <audio id="sonido-boop" src="audio/fnaf-12-3-freddys-nose-sound.mp3" preload="auto"></audio>
+                </div>
+
+                <h3 class="font-bold text-3xl mb-3 text-purple-700">Emprendimiento Autogestivo</h3>
+                <p class="text-lg font-medium text-gray-800">Pehuajó - Trenque Lauquen</p>
+            </div>
+        </section>
+
+        <!-- QUIÉNES SOMOS -->
+        <section class="text-center">
+            <div class="bg-purple-100 p-6 rounded shadow-[6px_6px_0_#000] border-2 border-black hover:-translate-y-1 hover:shadow-[12px_12px_0_#000] transition-all group max-w-3xl mx-auto">
+                <div class="relative w-full h-56 md:h-80 mb-6 border-2 border-black rounded overflow-hidden">
+                    <!-- Imagen base -->
+                    <img src="img/_DSC0136.jpg" class="w-full h-full object-cover">
+
+                    <!-- Imagen hover -->
+                    <img src="img/_DSC0140.jpg"
+                        class="absolute top-0 left-0 w-full h-full object-cover object-[50%_20%] opacity-0 group-hover:opacity-100 transition duration-300">
+                </div>
+                <h3 class="font-bold text-3xl mb-3 text-purple-700">¿Quiénes somos?</h3>
+                <p class="text-lg font-medium text-gray-800">
+                    Somos una pareja de emprendedores que ama crear cosas únicas y especiales. Nos encanta hacer
+                    productos que puedan alegrar a las personas y que sean un reflejo de nuestra personalidad.
+                </p>
+            </div>
+        </section>
+
+        <!-- TARJETAS DE PRODUCTOS -->
+        <section id="productos" class="scroll-mt-24 mb-10">
+            <div class="text-center mb-10">
+                <h2 class="inline-block bg-purple-600 px-8 py-3 rounded shadow-[4px_4px_0_#000] border-2 border-black text-4xl font-bold text-orange-300 tracking-wide">
+                    Productos
+                </h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+
+            <a class="bg-purple-100 p-5 rounded shadow-[4px_4px_0_#000] border-2 border-black items-center text-center hover:-translate-y-1 hover:shadow-[6px_6px_0_#000] transition-all flex flex-col">
+                <img src="img/_DSC0100.jpg" class="rounded border-2 border-black mb-4 w-full h-40 md:h-56 object-cover">
+                <h3 class="font-bold text-2xl mb-2 text-purple-600">Peluches Hechos a Mano</h3>
+                <p class="font-medium text-gray-800">Diseños únicos hechos a mano.</p>
+            </a>
+            
+            <a class="bg-purple-100 p-5 rounded shadow-[4px_4px_0_#000] border-2 border-black items-center text-center hover:-translate-y-1 hover:shadow-[6px_6px_0_#000] transition-all flex flex-col">
+                <img src="img/_DSC0077.jpg" class="rounded border-2 border-black mb-4 w-full h-40 md:h-56 object-cover">
+                <h3 class="font-bold text-2xl mb-2 text-purple-600">Stickers Personalizados</h3>
+                <p class="font-medium text-gray-800">Vinilo con protección UV.</p>
+            </a>
+            
+            <a class="bg-purple-100 p-5 rounded shadow-[4px_4px_0_#000] border-2 border-black items-center text-center hover:-translate-y-1 hover:shadow-[6px_6px_0_#000] transition-all flex flex-col">
+                <img src="img/_DSC0152.jpg" class="rounded border-2 border-black mb-4 w-full h-40 md:h-56 object-cover">
+                <h3 class="font-bold text-2xl mb-2 text-purple-600">Aros Góticos</h3>
+                <p class="font-medium text-gray-800">Anzuelos de niquel y acero quirúrgico.</p>
+            </a>
+
+            <a class="bg-purple-100 p-5 rounded shadow-[4px_4px_0_#000] border-2 border-black items-center text-center hover:-translate-y-1 hover:shadow-[6px_6px_0_#000] transition-all flex flex-col">
+                <img src="img/_DSC0252.jpg" class="rounded border-2 border-black mb-4 w-full h-40 md:h-56 object-cover">
+                <h3 class="font-bold text-2xl mb-2 text-purple-600">Collares Góticos</h3>
+                <p class="font-medium text-gray-800">Cadenas de acero quirúrgico.</p>
+            </a>
+            
+        </div>
+        </section>
+    </main>
+
+    <!-- FOOTER / CONTACTO -->
+    <footer id="contacto" class="bg-purple-600 text-white text-center p-8 mt-4 shadow-inner border-t-4 border-black">
+        <h2 class="text-3xl font-bold text-orange-300 mb-6 tracking-wide">Contacto</h2>
+        
+        <div class="flex flex-col md:flex-row justify-center gap-6 md:gap-12 mb-8 text-lg font-medium">
+            <a href="https://instagram.com/buttoncat_shop" target="_blank" class="hover:text-orange-300 hover:-translate-y-1 transition-all flex items-center justify-center gap-2">
+                <i class="fa-brands fa-instagram text-2xl"></i> Instagram: @buttoncat_shop
+            </a>
+            <a href="https://wa.me/5492396575353" target="_blank" class="hover:text-orange-300 hover:-translate-y-1 transition-all flex items-center justify-center gap-2">
+                <i class="fa-brands fa-whatsapp text-2xl"></i> WhatsApp: 2396-575353
+            </a>
+        </div>
+        
+        <div class="border-t-2 border-purple-400 pt-6 text-sm text-purple-300">
+            © 2026 - Buttoncat Shop | Pehuajó - Trenque Lauquen
+        </div>
+    </footer>
+</body>
+
+</html>
